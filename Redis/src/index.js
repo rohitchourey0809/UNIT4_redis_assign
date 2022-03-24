@@ -1,8 +1,14 @@
 const express = require('express')
-const app = express()
+const todocontroller = require('./controllers/todo.controller')
 
+
+const app = express()
+app.use(express.json())
+
+app.use("/todolink",todocontroller)
 
 const connect = require('./configs/db')
+
 
 
 
